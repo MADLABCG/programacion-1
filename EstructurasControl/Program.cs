@@ -3,8 +3,6 @@
 
 //Necesitamos Imprimir los numeros pares del 1 al 1000;
 
-
-
 //Loop o Bucle (FOR)
 Console.WriteLine("Bucle FOR");
 for (int i = 11; i <= 10; i++)
@@ -23,7 +21,6 @@ Console.WriteLine("Bucle While");
 int y = 11;
 while (y <= 10)
 {
-    y++;
     if (y % 2 == 0)
     {
         Console.WriteLine("El numero " + y + " Es PAR");
@@ -31,6 +28,7 @@ while (y <= 10)
     {
         Console.WriteLine("El numero " + y + " Es IMPAR");
     }
+    y++;
 }
 
 //Loop o Bucle (DO WHILE)
