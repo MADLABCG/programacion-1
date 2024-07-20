@@ -24,6 +24,11 @@ namespace p1_ejemplos
             this.isVendible = isVendible;
         }
 
+        public Items()
+        {
+            
+        }
+
         public string? Nombre
         {
             get { return nombre; }
@@ -62,12 +67,12 @@ namespace p1_ejemplos
 
         public override string? ToString()
         {
-            return nombre + "\n"
-                + descripcion + "\n"
-                + cantidad + "\n"
-                + precio + "\n"
-                + isVendible + "\n"
-                + Ganancia + "\n";
+            return "Nombre: " + nombre + "\n"
+                + "Descripcion: " + descripcion + "\n"
+                + "Cantidad Vendida: " + cantidad + "\n"
+                + "Precio de Venta: " + precio + "\n"
+                + "Puede Ser Vendido: " + isVendible + "\n"
+                + "Ganancia de Ventas: " + Ganancia + "\n";
         }
     }
 }

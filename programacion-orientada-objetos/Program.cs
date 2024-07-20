@@ -1,17 +1,17 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 
-transportacion.Carro fordescape = new("2.4 litros", 4, 4, 5, true, "gasolina", "negro", "ford", 800000);
-transportacion.Carro jaguar = new("3.6 litros", 4, 2, 2, true, "gasolina", "blanco", "Jaguar", 3000000);
+//transportacion.Carro fordescape = new("2.4 litros", 4, 4, 5, true, "gasolina", "negro", "ford", 800000);
+//transportacion.Carro jaguar = new("3.6 litros", 4, 2, 2, true, "gasolina", "blanco", "Jaguar", 3000000);
 
 
-jaguar.Color = "Rojo";
+//jaguar.Color = "Rojo";
 
-Console.WriteLine("Vehiculo 1");
-Console.WriteLine(fordescape.ToString());
+//Console.WriteLine("Vehiculo 1");
+//Console.WriteLine(fordescape.ToString());
 
-Console.WriteLine("Vehiculo 2");
-Console.WriteLine(jaguar.ToString());
+//Console.WriteLine("Vehiculo 2");
+//Console.WriteLine(jaguar.ToString());
 
 
 //vida.Humano humano1 = new("Juan Jose", "Perez Garcia", "Masculino", 24, "12 Agosto 1999", "Marron", "Azul", 6);
@@ -34,3 +34,12 @@ Console.WriteLine(jaguar.ToString());
 
 //string papa1 = "Hola";
 //string papa2 = "Adios";
+
+transportacion.Carro mi_primer_carro = new("5.8 Litros", 4, 2, 2, true, "Gasolina", "Rojo Chino", "Corvette", 300000);
+
+mi_primer_carro.Baul = false;
+mi_primer_carro.Color = "Negro";
+
+Console.WriteLine("Vehiculo 1");
+Console.WriteLine(mi_primer_carro.ToString());
+Console.WriteLine(mi_primer_carro.Encender());

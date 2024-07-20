@@ -57,6 +57,11 @@ namespace transportacion
             set { combustible = value; } 
         }
 
+        public string? Encender()
+        {
+            return "El vehiculo esta encendido";
+        }
+
         public override string? ToString()
         {
             return "Motor: "+ Motor + "\n" 
