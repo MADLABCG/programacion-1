@@ -15,7 +15,9 @@ Console.WriteLine("Opcion 2: Restar");
 Console.WriteLine("Opcion 3: Dividir");
 Console.WriteLine("Opcion 4: Multiplicar");
 Console.WriteLine("Opcion 5: Calculo ITBIS");
-Console.WriteLine("Opcion 6: Salir Sistema");
+Console.WriteLine("Opcion 6: Inverso Calculo ITBIS");
+Console.WriteLine("Opcion 7: Porcentaje");
+Console.WriteLine("Opcion 8: Salir Sistema");
 Console.WriteLine("Escriba el numero de la opcion deseada");
 
 
@@ -49,6 +51,12 @@ switch(opcion)
         opcionITBIS();
         goto inicio;
     case 6:
+        opcionInversoITBIS();
+        goto inicio;
+    case 7:
+        opcionPorcentaje();
+        goto inicio;
+    case 8:
         System.Environment.Exit(0);
         break;
     default:
@@ -57,6 +65,70 @@ switch(opcion)
         goto inicio;
 }
 
+
+void opcionPorcentaje()
+{
+    double numero1;
+    double numero2;
+
+solicitar_numero1:
+    Console.WriteLine("Por favor entre el Numero a Calcular");
+    try
+    {
+        numero1 = double.Parse(Console.ReadLine());
+    }
+    catch
+    {
+        Console.WriteLine("Favor digite un numero");
+        goto solicitar_numero1;
+    }
+
+solicitar_numero2:
+    Console.WriteLine("Por favor entre el Porcentaje a aplicar");
+    try
+    {
+        numero2 = double.Parse(Console.ReadLine());
+    }
+    catch
+    {
+        Console.WriteLine("Favor digite un numero");
+        goto solicitar_numero2;
+    }
+    Console.Clear();
+    Console.WriteLine("=======================================================================");
+    Console.WriteLine("Resultados Porcentaje - Opcion 7");
+    Console.WriteLine("=======================================================================");
+    Console.WriteLine("Numero a Calcular : " + numero1);
+    Console.WriteLine("Porcentaje a Aplicar : " + numero2);
+    Console.WriteLine("Resultado : " + calcularPorcentaje(numero1, numero2));
+    Console.WriteLine("=======================================================================");
+    Console.WriteLine(" ");
+}
+
+void opcionInversoITBIS()
+{
+    double numero1;
+
+solicitar_numero1:
+    Console.WriteLine("Por favor entre el Precio con ITBIS Incluido");
+    try
+    {
+        numero1 = double.Parse(Console.ReadLine());
+    }
+    catch
+    {
+        Console.WriteLine("Favor digite un numero");
+        goto solicitar_numero1;
+    }
+    Console.Clear();
+    Console.WriteLine("=======================================================================");
+    Console.WriteLine("Resultados Inverso ITBIS - Opcion 6");
+    Console.WriteLine("=======================================================================");
+    Console.WriteLine("Precio ITBIS Incluido : " + numero1);
+    Console.WriteLine("Precio SIN ITBIS : " + invertirItbis(numero1));
+    Console.WriteLine("=======================================================================");
+    Console.WriteLine(" ");
+}
 
 void opcionITBIS()
 {
@@ -266,5 +338,15 @@ double multiplicar(double x, double y)
 
 double calcularItbis(double x)
 {
-    return (x * 0.18);
+    return (x * (18/100));
+}
+
+double invertirItbis(double x)
+{
+    return (x / 1.18);
+}
+
+double calcularPorcentaje(double x, double y)
+{
+    return (x * (y/100));
 }
